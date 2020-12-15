@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { Text, View, StyleSheet, ScrollView } from 'react-native'
+import { Text, View, StyleSheet, ScrollView,  } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import ItemCard from './ItemCard'
 
@@ -34,6 +34,6 @@ export default function ItemContainer() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin: 15,
+        margin: 5,
     }
 })
