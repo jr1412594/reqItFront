@@ -14,7 +14,7 @@ export default function App() {
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <Text>What items would you like to request?</Text>
+        <Text style={styles.header}>What items would you like to request?</Text>
         <ItemContainer />
         <StatusBar style="auto" />
       </View>
@@ -28,4 +28,10 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     width: '100%'
   },
+  header: {
+    color: 'red',
+    paddingTop: 4,
+    fontSize: 'bold',
+    fontWeight: 700,
+  }
 });
