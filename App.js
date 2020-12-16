@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: 'red',
     paddingTop: 4,
     fontSize: 16,
-    fontWeight: 700,
+    fontWeight: '700',
     textAlign: 'center'
   }
 });

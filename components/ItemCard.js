@@ -1,8 +1,14 @@
-import React from 'react'
-import { View, Text, Image, StyleSheet} from 'react-native'
+import React, {useState} from 'react'
+import { View, Text, Image, StyleSheet, Button} from 'react-native'
 export default function ItemCard({item}) {
+
+    // const handleRequest = () => {
+    //   console.log('clicked')
+    // }
+
     return (
         <View>
+            <Button title='Request Item'/>
             <Text>{item.name}</Text>
             <View>
             <Image style={styles.itemImage} source={{uri: item.image}} />
