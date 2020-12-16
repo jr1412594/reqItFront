@@ -9,6 +9,15 @@ const items = (state=[], action) => {
     }
 }
 
+const reqItems = (state=[], action) => {
+    switch(action.type) {
+        case 'REQ_ITEMS':
+            return action.requestItems
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    items,
+    items, reqItems, 
 })
