@@ -13,14 +13,13 @@ const dispatch = useDispatch()
 
     return (
         <View>
-            <TouchableOpacity>
-                <Text>{item.name}</Text>
+            <TouchableOpacity style={styles.needs} onPress={handleRequest}>
+                <Text style={styles.itemNames}>{item.name}</Text>
                     <View>
                         <Image 
                             style={styles.itemImage} 
                             source={{uri: item.image}} />
                     </View>
-                <Button title='Request Item'onPress={handleRequest}/>
             </TouchableOpacity>
         </View>
     )
@@ -32,4 +31,12 @@ const styles = StyleSheet.create({
         height: 100,
         marginBottom: 10,
     },
+    needs: {
+        // backgroundColor: "#009fff",
+        // padding: 10,
+        marginTop: 10,
+    },
+    itemNames: {
+        fontSize: 18,
+    }
 })
