@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { View, Text, Image, StyleSheet, Button} from 'react-native'
+import { View, Text, Image, StyleSheet, Button, TouchableOpacity} from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function ItemCard({item}) {
@@ -13,11 +13,15 @@ const dispatch = useDispatch()
 
     return (
         <View>
-            <Text>{item.name}</Text>
-            <View>
-                <Image style={styles.itemImage} source={{uri: item.image}} />
-            </View>
-            <Button title='Request Item'onPress={handleRequest}/>
+            <TouchableOpacity>
+                <Text>{item.name}</Text>
+                    <View>
+                        <Image 
+                            style={styles.itemImage} 
+                            source={{uri: item.image}} />
+                    </View>
+                <Button title='Request Item'onPress={handleRequest}/>
+            </TouchableOpacity>
         </View>
     )
 }

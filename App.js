@@ -26,7 +26,7 @@ export default function App() {
           component={SignInScreen} 
           options={{ title: 'Sign In'}}
           />
-          <Stack.Screen name="Req Item" component={HomeScreen}
+          <Stack.Screen name="Req Items" component={HomeScreen}
           />
           <Stack.Screen name="Req List" component={ReqItemsScreen}
           />

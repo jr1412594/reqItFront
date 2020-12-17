@@ -1,10 +1,12 @@
 import React from 'react'
-import { 
+import 
+    { 
         View, 
         Text, 
         Button, 
         StyleSheet, 
-        TextInput } 
+        TextInput 
+    } 
     from 'react-native'
 
 
@@ -14,11 +16,17 @@ export default function SignInScreen({navigation}) {
             <Text style={styles.login}>
                 Login screen
             </Text>
-            <TextInput style={styles.userName}
+            <TextInput 
+                style={styles.userName}
+                placeholder="Enter Name"
+            />
+            <TextInput 
+                style={styles.roomNumber}
+                placeholder="Enter Room Number"
             />
             <Button title="Sign In"
             onPress={() => 
-                navigation.navigate('Req Item')}
+                navigation.navigate('Req Items')}
             />
         </View>
     )
@@ -34,7 +42,21 @@ const styles = StyleSheet.create({
         height: 40,
         borderColor: 'gray',
         borderWidth: 1,
-        
+        marginTop: 200,
+        marginLeft: 10,
+        marginRight: 10,
+        paddingLeft: 20,
+        fontSize: 20,
+    },
+    roomNumber: {
+        height: 40,
+        borderColor: 'gray',
+        borderWidth: 1,
+        marginTop: 20,
+        marginLeft: 10,
+        marginRight: 10,
+        paddingLeft: 20,
+        fontSize: 20,
     }
     
 })

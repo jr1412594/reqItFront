@@ -14,8 +14,8 @@ export default function HomeScreen({navigation}) {
                 />
             <Text style={styles.header}>
                 Home Screen
-                <ItemContainer />
             </Text>
+                <ItemContainer />
         </View>
     )
 }
