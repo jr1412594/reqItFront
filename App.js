@@ -4,8 +4,12 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
 import { StyleSheet, Text, View } from 'react-native';
-import ItemContainer from './components/ItemContainer'
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './screens/HomeScreen'
+// import ItemContainer from './components/ItemContainer'
 
+const Stack = createStackNavigator();
 
 export default function App() {
 
@@ -13,11 +17,16 @@ export default function App() {
   
   return (
     <Provider store={store}>
-      <View style={styles.container}>
-        <Text style={styles.header}>What items would you like to request?</Text>
-        <ItemContainer />
-        <StatusBar style="auto" />
-      </View>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={HomeScreen}/>
+            {/* <View style={styles.container}>
+              <Text style={styles.header}>What items would you like to request?</Text>
+              <ItemContainer />
+              <StatusBar style="auto" />
+            </View> */}
+        </Stack.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 }

@@ -12,7 +12,7 @@ const items = (state=[], action) => {
 const reqItems = (state=[], action) => {
     switch(action.type) {
         case 'REQ_ITEMS':
-            return action.requestItems
+            return action.item
         default:
             return state
     }

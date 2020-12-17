@@ -1,18 +1,23 @@
 import React, {useState} from 'react'
 import { View, Text, Image, StyleSheet, Button} from 'react-native'
-export default function ItemCard({item}) {
+import { useDispatch, useSelector } from 'react-redux'
 
-    // const handleRequest = () => {
-    //   console.log('clicked')
-    // }
+export default function ItemCard({item}) {
+const dispatch = useDispatch()
+// const reqItems = useSelector(state => state.reqItems)
+
+    const handleRequest = () => {
+        dispatch({type: 'REQ_ITEMS', item: item})
+        console.log(item.name, item.id,'clicked this one')
+    }
 
     return (
         <View>
-            <Button title='Request Item'/>
             <Text>{item.name}</Text>
             <View>
-            <Image style={styles.itemImage} source={{uri: item.image}} />
+                <Image style={styles.itemImage} source={{uri: item.image}} />
             </View>
+            <Button title='Request Item'onPress={handleRequest}/>
         </View>
     )
 }
