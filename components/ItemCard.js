@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function ItemCard({item}) {
 const dispatch = useDispatch()
-// const reqItems = useSelector(state => state.reqItems)
+
 
     const handleRequest = () => {
         dispatch({type: 'REQ_ITEMS', item: item})
