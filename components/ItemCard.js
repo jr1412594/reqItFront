@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 
 export default function ItemCard({item}) {
 const dispatch = useDispatch()
+const reqItems = useSelector(state => state.reqItems)
 
 
     const handleRequest = () => {
-        dispatch({type: 'REQ_ITEMS', item: item})
-        console.log(item.name, item.id,'clicked this one')
+            dispatch({type: 'REQ_ITEMS', item: item})
     }
 
     return (
@@ -18,7 +18,8 @@ const dispatch = useDispatch()
                     <View>
                         <Image 
                             style={styles.itemImage} 
-                            source={{uri: item.image}} />
+                            source={{uri: item.image}} 
+                        />
                     </View>
             </TouchableOpacity>
         </View>
@@ -32,8 +33,6 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     needs: {
-        // backgroundColor: "#009fff",
-        // padding: 10,
         marginTop: 10,
     },
     itemNames: {

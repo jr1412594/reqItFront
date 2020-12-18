@@ -5,6 +5,7 @@ import ItemContainer from '../components/ItemContainer'
 
 
 export default function HomeScreen({navigation}) {
+
     return (
         <View style={styles.container}>
             <Button 
@@ -15,7 +16,7 @@ export default function HomeScreen({navigation}) {
             <Text style={styles.header}>
                 Home Screen
             </Text>
-                <ItemContainer />
+            <ItemContainer />
         </View>
     )
 }
