@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, ScrollView } from 'react-native'
+import { Text, View, ScrollView, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import ItemCard from '../components/ItemCard'
 
@@ -15,7 +15,7 @@ export default function ReqItemsScreen() {
     })
 
     return (
-        <View>
+        <View style={styles.container}>
             <Text>
                 Requested list
             </Text>
@@ -25,3 +25,9 @@ export default function ReqItemsScreen() {
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: '#fff',
+    }
+})

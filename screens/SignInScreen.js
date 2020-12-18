@@ -19,7 +19,7 @@ export default function SignInScreen({navigation}) {
             <ImageBackground source={image} style={styles.image}>
 
             <Text style={styles.login}>
-                Login screen
+                ReqIt App
             </Text>
             <TextInput 
                 style={styles.userName}
@@ -60,9 +60,9 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
-        
+        // color: 'white',
         borderWidth: 2,
-        backgroundColor: 'gray'
+        backgroundColor: 'white'
     },
     roomNumber: {
         height: 40,
@@ -73,8 +73,9 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
+        // color: 'white',
         borderWidth: 2,
-        backgroundColor: 'gray'
+        backgroundColor: 'white'
 
         
     },
