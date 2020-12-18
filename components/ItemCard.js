@@ -3,14 +3,13 @@ import { View, Text, Image, StyleSheet, Button, TouchableOpacity} from 'react-na
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function ItemCard({item}) {
-const dispatch = useDispatch()
-const reqItems = useSelector(state => state.reqItems)
-
+    const dispatch = useDispatch()
+    const reqItems = useSelector(state => state.reqItems)
 
     const handleRequest = () => {
-            if(!reqItems.find(i => i.id === item.id)){
+        if(!reqItems.find(i => i.id === item.id)){
             dispatch({type: 'REQ_ITEMS', item: item})
-            }
+        }
     }
 
     return (
