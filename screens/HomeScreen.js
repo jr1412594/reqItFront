@@ -13,9 +13,6 @@ export default function HomeScreen({navigation}) {
                 style={styles.reqButton} 
                 onPress={() => navigation.navigate('Req List')}
                 />
-            <Text style={styles.header}>
-                Home Screen
-            </Text>
             <ItemContainer />
         </View>
     )
@@ -31,13 +28,6 @@ const styles = StyleSheet.create({
         flex: 1,
         backgroundColor: '#fff',
         width: '100%'
-    },
-    header: {
-        color: 'red',
-        paddingTop: 4,
-        fontSize: 16,
-        fontWeight: '700',
-        textAlign: 'center'
     },
     reqButton: {
         textAlign: 'right'

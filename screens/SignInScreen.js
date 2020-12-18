@@ -5,38 +5,51 @@ import
         Text, 
         Button, 
         StyleSheet, 
-        TextInput 
+        TextInput,
+        ImageBackground,
     } 
     from 'react-native'
 
+const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_X4rhxlJPatFlNWi68Z_iVDWUWa6O6Ua2A&usqp=CAU"}
 
 export default function SignInScreen({navigation}) {
     return (
-        <View>
+        <>
+        <View style={styles.signInContainer}>
+            <ImageBackground source={image} style={styles.image}>
+
             <Text style={styles.login}>
                 Login screen
             </Text>
             <TextInput 
                 style={styles.userName}
                 placeholder="Enter Name"
-            />
+                />
             <TextInput 
                 style={styles.roomNumber}
                 placeholder="Enter Room Number"
-            />
+                />
             <Button title="Sign In"
             onPress={() => 
                 navigation.navigate('Req Items')}
-            />
+                style={styles.signInButton}
+                />
+                </ImageBackground>
         </View>
+        </>
     )
 }
 
 const styles = StyleSheet.create({
-    login: {
+    // login: {
+    //     flex: 1,
+    //     justifyContent: 'center',
+    //     alignSelf: 'baseline'
+    // },
+    signInContainer: {
         flex: 1,
-        justifyContent: 'center',
-        alignSelf: 'baseline'
+        resizeMode: 'cover',
+        marginBottom: 0,
     },
     userName: {
         height: 40,
@@ -47,6 +60,9 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
+        
+        borderWidth: 2,
+        backgroundColor: 'gray'
     },
     roomNumber: {
         height: 40,
@@ -57,6 +73,17 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
+        borderWidth: 2,
+        backgroundColor: 'gray'
+
+        
+    },
+    image: {
+        width: '100%',
+        height: '100%'
+    },
+    signInButton: {
+        fontSize: 25,
     }
     
 })
