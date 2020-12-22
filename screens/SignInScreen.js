@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import 
     { 
         View, 
@@ -9,11 +9,36 @@ import
         ImageBackground,
     } 
     from 'react-native'
+import { useDispatch } from 'react-redux'
+
 
 const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_X4rhxlJPatFlNWi68Z_iVDWUWa6O6Ua2A&usqp=CAU"}
 
 export default function SignInScreen({navigation}) {
+
+    const dispatch = useDispatch()  
+    const [username, setUsername] = useState('')
+    const [roomNumber, setRoomNumber] = useState('')
+
+
+    const handleUsername = (text) => {
+        setUsername(text)
+    }
+
+    const handleRoomNumber = (text) => {
+        setRoomNumber(text)
+    }
+
+    const setUser = () => {
+        dispatch({type: 'SET_USERNAME', user: {name: username, room: roomNumber}})
+    }
+
+    const handleNavigation = () => {
+        setUser()
+        navigation.navigate('Req Items')
+    }
     return (
+
         <>
         <View style={styles.signInContainer}>
             <ImageBackground source={image} style={styles.image}>
@@ -22,19 +47,23 @@ export default function SignInScreen({navigation}) {
                 ReqIt App
             </Text>
             <TextInput 
+                onChangeText={handleUsername}
+                value={username}
                 style={styles.userName}
                 placeholder="Enter Name"
-                />
+            />
             <TextInput 
+                onChangeText={handleRoomNumber}
+                value={roomNumber}
                 style={styles.roomNumber}
                 placeholder="Enter Room Number"
-                />
+                keyboardType={'numeric'}
+            />
             <Button title="Sign In"
-            onPress={() => 
-                navigation.navigate('Req Items')}
+                onPress={handleNavigation}
                 style={styles.signInButton}
-                />
-                </ImageBackground>
+            />
+            </ImageBackground>
         </View>
         </>
     )

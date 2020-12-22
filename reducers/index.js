@@ -18,6 +18,15 @@ const reqItems = (state=[], action) => {
     }
 }
 
+const username = (state={}, action) => {
+    switch(action.type) {
+        case 'SET_USERNAME':
+            return action.user
+        default: 
+            return state
+    }
+}
+
 export default combineReducers({
-    items, reqItems, 
+    items, reqItems, username,
 })

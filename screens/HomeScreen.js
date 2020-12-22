@@ -1,13 +1,15 @@
 import React from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import ItemContainer from '../components/ItemContainer'
-
+import { useSelector } from 'react-redux'
 
 
 export default function HomeScreen({navigation}) {
-
+    const user = useSelector(state => state.username)
+    console.log(user,'not jr')
     return (
         <View style={styles.container}>
+            
             <Button 
                 title="Your Requests" 
                 style={styles.reqButton} 
