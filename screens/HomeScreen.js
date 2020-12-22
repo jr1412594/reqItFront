@@ -1,17 +1,25 @@
 import React, { useEffect } from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import ItemContainer from '../components/ItemContainer'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 
 const userBaseUrl = 'http://localhost:7000/users/'
 
 export default function HomeScreen({navigation}) {
     const user = useSelector(state => state.username)
+    const reqItems = useSelector(state => state.reqItems)
+    const dispatch = useDispatch()
     
+    console.log(reqItems,'hello its me')
     const newUser = {
         name: user.name,
         room_number: user.room_number
     }
+
+    const navigateRequest = () => {
+        navigation.navigate('Req List')
+    }
+
     console.log(newUser, 'if im lucky')
     useEffect (() => {
         fetch(userBaseUrl, {
@@ -23,7 +31,7 @@ export default function HomeScreen({navigation}) {
             body: JSON.stringify(newUser)
         })
         .then(response => response.json())
-        .then(result => console.log(result))
+        .then(user => dispatch({type: 'CREATE_USER', userObject: {id: user.id, name: user.name, room_number: user.room_number }}))
     }, []);
 
     return (
@@ -32,7 +40,7 @@ export default function HomeScreen({navigation}) {
             <Button 
                 title="Your Requests" 
                 style={styles.reqButton} 
-                onPress={() => navigation.navigate('Req List')}
+                onPress={navigateRequest}
                 />
             <ItemContainer />
         </View>

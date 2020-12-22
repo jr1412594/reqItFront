@@ -27,6 +27,15 @@ const username = (state={}, action) => {
     }
 }
 
+const createdUser = (state={}, action) => {
+    switch(action.type) {
+        case 'CREATE_USER':
+            return action.userObject
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    items, reqItems, username,
+    items, reqItems, username, createdUser,
 })
