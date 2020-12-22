@@ -30,7 +30,13 @@ export default function SignInScreen({navigation}) {
     }
 
     const setUser = () => {
-        dispatch({type: 'SET_USERNAME', user: {name: username, room: roomNumber}})
+        dispatch({
+            type: 'SET_USERNAME', 
+            user: {
+                name: username, 
+                room_number: roomNumber
+                }
+        })
     }
 
     const handleNavigation = () => {

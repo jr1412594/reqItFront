@@ -1,12 +1,31 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import ItemContainer from '../components/ItemContainer'
 import { useSelector } from 'react-redux'
 
+const userBaseUrl = 'http://localhost:7000/users/'
 
 export default function HomeScreen({navigation}) {
     const user = useSelector(state => state.username)
-    console.log(user,'not jr')
+    
+    const newUser = {
+        name: user.name,
+        room_number: user.room_number
+    }
+    console.log(newUser, 'if im lucky')
+    useEffect (() => {
+        fetch(userBaseUrl, {
+            method: 'POST',
+            headers: {
+                "Content-Type": 'application/json',
+                "Accept": 'application/json'
+            },
+            body: JSON.stringify(newUser)
+        })
+        .then(response => response.json())
+        .then(result => console.log(result))
+    }, []);
+
     return (
         <View style={styles.container}>
             
