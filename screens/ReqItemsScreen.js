@@ -9,36 +9,37 @@ const requestUrl = 'http://localhost:7000/requests'
 export default function ReqItemsScreen() {
 
     const reqItems = useSelector(state => state.reqItems)
-    const createdUser = useSelector(state => state.createdUser)
+    // const createdUser = useSelector(state => state.createdUser)
 
+
+    console.log(reqItems, 'requested')
     const requestedItems = () => reqItems.map(item => {
         return (
             <ItemCard item={item} key={item.id}/>
         )
     })
 
-    const requestObjects = {
-        user_id: createdUser.id,
-        item_id: reqItems[reqItems.length - 1].id
-    }
-
-    console.log(requestObjects, 'objects')
-
-    // const handleRequests = () => {
-        useEffect (() => {
-            fetch(requestUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify(requestObjects)
-            })
-            .then(response => response.json())
-            .then(result => console.log(result))
-        }, [reqItems.length]); 
-        console.log('run')
+    // const requestObjects = {
+    //     user_id: createdUser.id,
+    //     item_id: reqItems[reqItems.length - 1].id
     // }
+
+    // console.log(requestObjects, 'objects')
+
+        // useEffect (() => {
+        //     fetch(requestUrl, {
+        //         method: 'POST',
+        //         headers: {
+        //             'Content-Type': 'application/json',
+        //             'Accept': 'application/json'
+        //         },
+        //         body: JSON.stringify(requestObjects)
+        //     })
+        //     .then(response => response.json())
+        //     .then(result => console.log(result))
+        // }, [reqItems]); 
+        // console.log('run')
+
     return (
         <View style={styles.container}>
             <Text>

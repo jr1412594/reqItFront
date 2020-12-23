@@ -9,7 +9,7 @@ import
         ImageBackground,
     } 
     from 'react-native'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 
 const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_X4rhxlJPatFlNWi68Z_iVDWUWa6O6Ua2A&usqp=CAU"}
@@ -20,6 +20,7 @@ export default function SignInScreen({navigation}) {
     const [username, setUsername] = useState('')
     const [roomNumber, setRoomNumber] = useState('')
 
+    // console.log(user, 'when does this fire off')
 
     const handleUsername = (text) => {
         setUsername(text)

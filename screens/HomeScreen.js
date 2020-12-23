@@ -10,7 +10,7 @@ export default function HomeScreen({navigation}) {
     const reqItems = useSelector(state => state.reqItems)
     const dispatch = useDispatch()
     
-    console.log(reqItems,'hello its me')
+
     const newUser = {
         name: user.name,
         room_number: user.room_number
