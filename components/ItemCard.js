@@ -37,7 +37,7 @@ export default function ItemCard({item}) {
     }
 
     return (
-        <View>
+        <View style={styles.itemDiv}>
             <TouchableOpacity style={styles.needs} onPress={handleRequest}>
                 <Text style={styles.itemNames}>{item.name}</Text>
                     <View>
@@ -54,13 +54,24 @@ export default function ItemCard({item}) {
 const styles = StyleSheet.create({
     itemImage: {
         width: '100%',
-        height: 100,
+        height: 210,
         marginBottom: 10,
+        marginLeft: 1,
+        marginRight: 20,
+        borderRadius: 15,
+        borderWidth: 0.5,
     },
     needs: {
         marginTop: 10,
     },
     itemNames: {
         fontSize: 18,
-    }
+        fontWeight: 'bold',
+        marginBottom: 2,
+    },
+    itemDiv: {
+        borderBottomWidth: 1,
+        borderBottomColor: 'gray',
+        
+    },
 })

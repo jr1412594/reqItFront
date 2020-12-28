@@ -4,7 +4,7 @@ import { Text, View, ScrollView, StyleSheet, Button } from 'react-native'
 import { useSelector } from 'react-redux'
 import ItemCard from '../components/ItemCard'
 
-const requestUrl = 'http://localhost:7000/requests'
+// const requestUrl = 'http://localhost:7000/requests'
 
 export default function ReqItemsScreen() {
 
@@ -48,10 +48,10 @@ export default function ReqItemsScreen() {
             <ScrollView>
                 {requestedItems()}
             </ScrollView>
-            <Button
+            {/* <Button
                 title="Request Items"
-                // onPress={handleRequests}
-            />
+                onPress={handleRequests}
+            /> */}
                 
         </View>
     )
@@ -59,6 +59,6 @@ export default function ReqItemsScreen() {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#fff',
+        backgroundColor: 'whitesmoke',
     }
 })

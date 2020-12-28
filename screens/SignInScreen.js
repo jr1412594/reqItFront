@@ -12,7 +12,7 @@ import
 import { useDispatch, useSelector } from 'react-redux'
 
 
-const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSy_X4rhxlJPatFlNWi68Z_iVDWUWa6O6Ua2A&usqp=CAU"}
+const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNO_zyA60RnWxDU0byK9DMM5Wsntb3O2QJ9w&usqp=CAU"}
 
 export default function SignInScreen({navigation}) {
 

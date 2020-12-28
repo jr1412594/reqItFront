@@ -36,6 +36,7 @@ export default function ItemContainer() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        margin: 5,
+        margin: 1,
+        backgroundColor: 'whitesmoke',
     }
 })
