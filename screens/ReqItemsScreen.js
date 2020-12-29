@@ -60,5 +60,8 @@ export default function ReqItemsScreen() {
 const styles = StyleSheet.create({
     container: {
         backgroundColor: 'whitesmoke',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-between'
     }
 })
