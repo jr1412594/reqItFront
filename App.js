@@ -1,4 +1,5 @@
 import React from 'react';
+import { LogBox } from 'react-native'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
@@ -7,10 +8,12 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen'
 import SignInScreen from './screens/SignInScreen';
 import ReqItemsScreen from './screens/ReqItemsScreen';
+import RequestedItemsScreen from './screens/RequestedItemsScreen';
 
 const Stack = createStackNavigator();
 
 export default function App() {
+  // LogBox.ignoreAllLogs();
 
   const store = createStore(reducers)
   
@@ -26,6 +29,8 @@ export default function App() {
           <Stack.Screen name="Req Items" component={HomeScreen}
           />
           <Stack.Screen name="Req List" component={ReqItemsScreen}
+          />
+          <Stack.Screen name="All Requests" component={RequestedItemsScreen}
           />
         </Stack.Navigator>
       </NavigationContainer>

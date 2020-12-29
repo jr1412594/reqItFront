@@ -22,13 +22,17 @@ export default function SignInScreen({navigation}) {
     const [username, setUsername] = useState('');
     const [roomNumber, setRoomNumber] = useState('');
     const [isEnabled, setIsEnabled] = useState(false);
-
+    const [password, setPassword] = useState('')
     const handleUsername = (text) => {
         setUsername(text)
     }
 
     const handleRoomNumber = (text) => {
         setRoomNumber(text)
+    }
+
+    const handlePassword = (text) => {
+        setPassword(text)
     }
 
     const setUser = () => {
@@ -43,10 +47,15 @@ export default function SignInScreen({navigation}) {
 
     const handleNavigation = () => {
         setUser()
+        password === '' ?
         navigation.navigate('Req Items')
+        :
+        navigation.navigate('All Requests')
     }
 
-    const toggleSwitch = () => setIsEnabled(previousState => !previousState)
+    const toggleSwitch = () => {
+        setIsEnabled(previousState => !previousState);
+    }
 
     return (
 
@@ -75,22 +84,21 @@ export default function SignInScreen({navigation}) {
                 :
                 null
             }
-                {
-                    isEnabled ? 
-                    <TextInput
-                        style={styles.password}
-                        placeholder='Enter Password'
-                        secureTextEntry={true}
-                    /> 
-                    :
-                    null
-                }
+            {
+                isEnabled ? 
+                <TextInput
+                    style={styles.password}
+                    onChangeText={handlePassword}
+                    value={password}
+                    placeholder='Enter Password'
+                    secureTextEntry={true}
+                /> 
+                :
+                null
+            }
             <View style={styles.switchContainer}>
                 <Text style={styles.switchText}>Employee ?</Text>
                 <Switch 
-                    style={{ transform: [{ scaleX: 5 }, { scaleY: 1 }], useNativeDriver: false }}
-                    trackColor={{ false: "#767577", true: "#81b0ff" }}
-                    thumbColor={isEnabled ? "green" : "red"}
                     activeText={'Yes'}
                     inActiveText={'No'}
                     onValueChange={toggleSwitch}

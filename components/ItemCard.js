@@ -68,10 +68,10 @@ const styles = StyleSheet.create({
         fontSize: 18,
         fontWeight: 'bold',
         marginBottom: 2,
+        alignItems: 'center'
     },
     itemDiv: {
         borderBottomWidth: 1,
         borderBottomColor: 'gray',
-        
     },
 })
