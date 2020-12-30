@@ -3,6 +3,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import RequestCard from './RequestCard'
 import { uniq } from 'lodash'
+import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const requestUrl = 'http://localhost:7000/requests'
 
@@ -18,19 +19,21 @@ export default function RequestContainer() {
     }, [])
 
 
-    console.log(requests,'this one')
+
     const showRequests = () => {
         const roomNumbers = uniq(requests.map(request => request.user.room_number))
             return roomNumbers.map(room => {
                 const selectRequests = requests.filter(request => request.user.room_number === room)
                 return (
-                    <View>
-                        <Text>{room}</Text>
-                        {selectRequests.map(request => {
-                            return (
-                                <RequestCard key={request.id} request={request}/>
-                            )
-                        })}
+                    <View style={styles.allReqItems}>
+                        <View style={styles.roomDiv}>
+                            <Text style={styles.room}>{room}</Text>
+                        </View>
+                            {selectRequests.map(request => {
+                                return (
+                                    <RequestCard key={request.id} request={request}/>
+                                )
+                            })}
                     </View>
                 )
         })
@@ -43,5 +46,16 @@ export default function RequestContainer() {
     )
 }
 
-//function Uniq from lodash// maybe just import
-//
+const styles = StyleSheet.create({
+    allReqItems: {
+        backgroundColor: 'smokewhite',
+    },
+    room: {
+        fontSize: 20,
+        height: 50,
+        alignSelf: 'center',
+    },
+    roomDiv: {
+        borderTopWidth: 2
+    }
+})

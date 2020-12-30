@@ -47,10 +47,10 @@ export default function SignInScreen({navigation}) {
 
     const handleNavigation = () => {
         setUser()
-        password === '' ?
-        navigation.navigate('Req Items')
-        :
+        password === 'password' ?
         navigation.navigate('All Requests')
+        :
+        navigation.navigate('Req Items')
     }
 
     const toggleSwitch = () => {
