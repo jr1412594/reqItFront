@@ -36,6 +36,15 @@ const createdUser = (state={}, action) => {
     }
 }
 
+const requests = (state=[], action) => {
+    switch(action.type) {
+        case 'ALL_REQUESTS':
+            return action.requests
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    items, reqItems, username, createdUser,
+    items, reqItems, username, createdUser, requests
 })

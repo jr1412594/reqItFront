@@ -20,7 +20,6 @@ export default function HomeScreen({navigation}) {
         navigation.navigate('Req List')
     }
 
-    console.log(newUser, 'if im lucky')
     useEffect (() => {
         fetch(userBaseUrl, {
             method: 'POST',

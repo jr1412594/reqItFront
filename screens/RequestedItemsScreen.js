@@ -1,13 +1,9 @@
-import React, { useEffect }from 'react'
+import React from 'react'
 import { View, Text } from 'react-native'
+import RequestContainer from '../components/RequestContainer'
 
-const requestUrl = 'http://localhost:7000/requests'
+
 export default function RequestedItemsScreen() {
-    useEffect(() => {
-        fetch(requestUrl)
-        .then(response => response.json())
-        .then(result => console.log(result))
-    })
 
     return (
     
@@ -15,6 +11,7 @@ export default function RequestedItemsScreen() {
             <Text>
                 Hello, its me
             </Text>
+            <RequestContainer/>
         </View>
         
     )
