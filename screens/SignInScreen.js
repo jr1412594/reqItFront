@@ -57,7 +57,7 @@ export default function SignInScreen({navigation}) {
         password === 'password' ?
         navigation.navigate('All Requests') 
         :
-        navigation.navigate('Req Items')
+        navigation.navigate('Option Screen')
     }
 
     const toggleSwitch = () => {

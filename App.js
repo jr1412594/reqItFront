@@ -9,6 +9,7 @@ import HomeScreen from './screens/HomeScreen'
 import SignInScreen from './screens/SignInScreen';
 import ReqItemsScreen from './screens/ReqItemsScreen';
 import RequestedItemsScreen from './screens/RequestedItemsScreen';
+import OptionScreen from './screens/OptionScreen';
 
 const Stack = createStackNavigator();
 
@@ -31,6 +32,8 @@ export default function App() {
             <Stack.Screen name="Req List" component={ReqItemsScreen}
             />
             <Stack.Screen name="All Requests" component={RequestedItemsScreen}
+            />
+            <Stack.Screen name="Option Screen" component={OptionScreen}
             />
         </Stack.Navigator>
       </NavigationContainer>
