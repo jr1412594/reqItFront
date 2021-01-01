@@ -6,11 +6,13 @@ import ItemCard from '../components/ItemCard'
 
 
 
-export default function ReqItemsScreen() {
+export default function ReqItemsScreen({navigation}) {
 
     const reqItems = useSelector(state => state.reqItems)
 
-
+    const handleLogout = () => {
+        navigation.navigate('SignIn')
+    }
 
     console.log(reqItems, 'requested')
     const requestedItems = () => reqItems.map(item => {
@@ -22,17 +24,15 @@ export default function ReqItemsScreen() {
 
     return (
         <View style={styles.container}>
-            <Text>
-                Requested list
-            </Text>
             <ScrollView>
                 {requestedItems()}
             </ScrollView>
-            {/* <Button
-                title="Request Items"
-                onPress={handleRequests}
-            /> */}
-                
+                <View style={styles.logout}>
+                    <Button 
+                        onPress={handleLogout}
+                        title='Log out'
+                    />
+                </View>
         </View>
     )
 }
@@ -41,7 +41,13 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'whitesmoke',
         flex: 1,
-        flexDirection: 'column',
-        justifyContent: 'space-between'
+    },
+    logout: {
+        backgroundColor: 'blue',
+        height: 40,
+        marginBottom: 30,
+        width: 90,
+        alignSelf: 'flex-end',
+        borderRadius: 10,
     }
 })

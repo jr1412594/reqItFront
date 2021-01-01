@@ -8,9 +8,6 @@ export default function RequestedItemsScreen() {
     return (
     
         <View>
-            <Text>
-                Hello, its me
-            </Text>
             <RequestContainer/>
         </View>
         

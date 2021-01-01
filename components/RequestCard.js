@@ -7,6 +7,14 @@ const reqUrl = 'http://localhost:7000/requests'
 export default function RequestCard({request}) {
 const dispatch = useDispatch()
 
+
+const updateRequests = () => {
+    fetch(reqUrl)
+        .then(response => response.json())
+        .then((requests) => dispatch({ type: 'ALL_REQUESTS', requests: requests}))
+    console.log(request.id,'clicked')
+}
+
 const handleComplete = () => {
     fetch(`${reqUrl}/${request.id}`,{
         method: 'DELETE',
@@ -15,13 +23,8 @@ const handleComplete = () => {
             'Accept': 'application/json'
         }
     })
-        .then(response => response.json())
-        .then(result => console.log(result))
-    fetch(reqUrl)
-    .then(response => response.json())
-    .then((requests) => dispatch({ type: 'ALL_REQUESTS', requests: requests}))
-    console.log(request.id,'clicked')
-}
+    updateRequests()
+    }
 
 
     return (
@@ -29,8 +32,9 @@ const handleComplete = () => {
             <TouchableOpacity onPress={handleComplete}>
                 <Text>{request.item.name}</Text> 
                 <Image 
-                style={styles.reqImage}
-                source={{uri: request.item.image}}/>
+                    style={styles.reqImage}
+                    source={{uri: request.item.image}}
+                />
             </TouchableOpacity>
         </View>
     )

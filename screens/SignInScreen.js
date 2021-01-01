@@ -43,12 +43,19 @@ export default function SignInScreen({navigation}) {
                 room_number: roomNumber
                 }
         })
+        
+    }
+    const resetFields = () =>{
+        setPassword('');
+        setRoomNumber('');
+        setUsername('');
     }
 
     const handleNavigation = () => {
         setUser()
+        resetFields()
         password === 'password' ?
-        navigation.navigate('All Requests')
+        navigation.navigate('All Requests') 
         :
         navigation.navigate('Req Items')
     }
@@ -97,7 +104,7 @@ export default function SignInScreen({navigation}) {
                 null
             }
             <View style={styles.switchContainer}>
-                <Text style={styles.switchText}>Employee ?</Text>
+                <Text style={styles.switchText}>EMPLOYEE?</Text>
                 <Switch 
                     activeText={'Yes'}
                     inActiveText={'No'}
@@ -107,10 +114,12 @@ export default function SignInScreen({navigation}) {
                     switchRightPx={5}
                 />
             </View>
-            <Button title="Sign In"
-                onPress={handleNavigation}
-                style={styles.signInButton}
-            />
+            <View>
+                <Button title="Sign In"
+                    onPress={handleNavigation}
+                    style={styles.signInButton}
+                />
+            </View>
             </ImageBackground>
         </View>
         </>
@@ -125,13 +134,13 @@ const styles = StyleSheet.create({
     //     alignSelf: 'baseline'
     // },
     switchContainer: {
-        flex: 1,
+        // flex: 1,
         flexDirection: 'row',
         alignItems: 'flex-start',
         marginLeft: 250,
         marginTop: 5,
-        height: 40,
-        height: 15,
+        height: 35,
+
     },
     switchText: {
         color: 'red',
@@ -153,7 +162,6 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
-        // color: 'white',
         borderWidth: 2,
         backgroundColor: 'white'
     },
@@ -189,7 +197,8 @@ const styles = StyleSheet.create({
     },
     signInButton: {
         fontSize: 25,
-        justifyContent: 'center'
+        justifyContent: 'center',
+        marginTop: 25,
     }
     
 })

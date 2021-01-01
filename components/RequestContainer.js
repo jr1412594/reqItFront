@@ -27,7 +27,7 @@ export default function RequestContainer() {
                 return (
                     <View style={styles.allReqItems}>
                         <View style={styles.roomDiv}>
-                            <Text style={styles.room}>{room}</Text>
+                            <Text key={room.id} style={styles.room}>{room}</Text>
                         </View>
                             {selectRequests.map(request => {
                                 return (
@@ -48,7 +48,7 @@ export default function RequestContainer() {
 
 const styles = StyleSheet.create({
     allReqItems: {
-        backgroundColor: 'smokewhite',
+        backgroundColor: 'whitesmoke',
     },
     room: {
         fontSize: 20,

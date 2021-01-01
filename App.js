@@ -26,12 +26,12 @@ export default function App() {
               component={SignInScreen} 
               options={{ title: 'Req It'}}
               />
-          <Stack.Screen name="Req Items" component={HomeScreen}
-          />
-          <Stack.Screen name="Req List" component={ReqItemsScreen}
-          />
-          <Stack.Screen name="All Requests" component={RequestedItemsScreen}
-          />
+            <Stack.Screen name="Req Items" component={HomeScreen}
+            />
+            <Stack.Screen name="Req List" component={ReqItemsScreen}
+            />
+            <Stack.Screen name="All Requests" component={RequestedItemsScreen}
+            />
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>
