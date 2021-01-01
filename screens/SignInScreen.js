@@ -128,13 +128,12 @@ export default function SignInScreen({navigation}) {
 
 const styles = StyleSheet.create({
 
-    // login: {
-    //     flex: 1,
-    //     justifyContent: 'center',
-    //     alignSelf: 'baseline'
-    // },
+    login: {
+        alignSelf: 'center',
+        fontSize: 20,
+        paddingTop: 50
+    },
     switchContainer: {
-        // flex: 1,
         flexDirection: 'row',
         alignItems: 'flex-start',
         marginLeft: 250,
@@ -163,7 +162,7 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         fontSize: 20,
         borderWidth: 2,
-        backgroundColor: 'white'
+        backgroundColor: 'white',
     },
     roomNumber: {
         height: 40,

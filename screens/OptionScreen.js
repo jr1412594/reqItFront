@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Button, StyleSheet} from 'react-native'
+import { View, Button, Text, StyleSheet} from 'react-native'
 
 export default function OptionScreen({navigation}) {
     
@@ -15,18 +15,25 @@ export default function OptionScreen({navigation}) {
 
 
     return (
-        <View>
+        <View style={styles.optionsContainer}>
             <View style={styles.requestScreen}>
-                <Button 
+                <Text onPress={handleRequest} style={styles.requestItemsText}>
+                    Request Items
+                </Text>
+                {/* <Button 
                     title='Request Items'
                     onPress={handleRequest}
-                />
+                /> */}
             </View>
             <View style={styles.reportScreen}>
-                <Button 
+                <Text onPress={handleReport} style={styles.reportText}>
+                    Report Issue
+                </Text>
+                {/* <Button 
+                    style={styles.reportButton}
                     title="Report Issue"
                     onPress={handleReport}
-                />
+                /> */}
             </View>
         </View>
     )
@@ -35,9 +42,36 @@ export default function OptionScreen({navigation}) {
 
 const styles = StyleSheet.create({
     requestScreen: {
-        backgroundColor: 'gray',
+        backgroundColor: '#faf6f6',
+        marginTop: 200,
+        width: 270,
+        height: 100,
+        alignSelf: 'center',
+        borderRadius: 10,
     },
     reportScreen: {
-        backgroundColor: 'whitesmoke'
+        backgroundColor: '#faf6f6',
+        marginTop: 100,
+        height: 100,
+        width: 270,
+        alignSelf: 'center',
+        borderRadius: 10
+    },
+    optionsContainer: {
+        flex: 1,
+        backgroundColor: '#e0e0e0'
+        
+    },
+    requestItemsText: {
+        fontSize: 30,
+        color: '#131516',
+        alignSelf: 'center',
+        paddingTop: 30
+    },
+    reportText: {
+        fontSize: 30,
+        color: '#131516',
+        alignSelf: 'center',
+        paddingTop: 30
     }
 })
