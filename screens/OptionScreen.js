@@ -48,6 +48,15 @@ const styles = StyleSheet.create({
         height: 100,
         alignSelf: 'center',
         borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+
+        elevation: 20,
     },
     reportScreen: {
         backgroundColor: '#faf6f6',
@@ -55,7 +64,16 @@ const styles = StyleSheet.create({
         height: 100,
         width: 270,
         alignSelf: 'center',
-        borderRadius: 10
+        borderRadius: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.51,
+        shadowRadius: 13.16,
+        elevation: 20,
+        
     },
     optionsContainer: {
         flex: 1,

@@ -69,57 +69,56 @@ export default function SignInScreen({navigation}) {
         <>
         <View style={styles.signInContainer}>
             <ImageBackground source={image} style={styles.image}>
-
-            <Text style={styles.login}>
-                ReqIt App
-            </Text>
-            <TextInput 
-                onChangeText={handleUsername}
-                value={username}
-                style={styles.userName}
-                placeholder="Enter Name"
-            />
-            {
-            isEnabled === false ?
-            <TextInput 
-                onChangeText={handleRoomNumber}
-                value={roomNumber}
-                style={styles.roomNumber}
-                placeholder="Enter Room Number"
-                keyboardType={'numeric'}
-                />
-                :
-                null
-            }
-            {
-                isEnabled ? 
-                <TextInput
-                    style={styles.password}
-                    onChangeText={handlePassword}
-                    value={password}
-                    placeholder='Enter Password'
-                    secureTextEntry={true}
-                /> 
-                :
-                null
-            }
-            <View style={styles.switchContainer}>
-                <Text style={styles.switchText}>EMPLOYEE?</Text>
-                <Switch 
-                    activeText={'Yes'}
-                    inActiveText={'No'}
-                    onValueChange={toggleSwitch}
-                    value={isEnabled}
-                    switchLeftPx={5}
-                    switchRightPx={5}
-                />
-            </View>
-            <View>
-                <Button title="Sign In"
-                    onPress={handleNavigation}
-                    style={styles.signInButton}
-                />
-            </View>
+                <Text style={styles.login}>
+                    ReqIt App
+                </Text>
+                    <TextInput 
+                        onChangeText={handleUsername}
+                        value={username}
+                        style={styles.userName}
+                        placeholder="Enter Name"
+                        />
+                    {
+                        isEnabled === false ?
+                        <TextInput 
+                        onChangeText={handleRoomNumber}
+                        value={roomNumber}
+                        style={styles.roomNumber}
+                        placeholder="Enter Room Number"
+                        keyboardType={'numeric'}
+                        />
+                        :
+                        null
+                    }
+                    {
+                        isEnabled ? 
+                        <TextInput
+                        style={styles.password}
+                        onChangeText={handlePassword}
+                        value={password}
+                        placeholder='Enter Password'
+                        secureTextEntry={true}
+                        /> 
+                        :
+                        null
+                    }
+                    <View style={styles.switchContainer}>
+                        <Text style={styles.switchText}>EMPLOYEE?</Text>
+                        <Switch 
+                            activeText={'Yes'}
+                            inActiveText={'No'}
+                            onValueChange={toggleSwitch}
+                            value={isEnabled}
+                            switchLeftPx={5}
+                            switchRightPx={5}
+                            />
+                    </View>
+                    <View>
+                        <Button title="Sign In"
+                            onPress={handleNavigation}
+                            style={styles.signInButton}
+                            />
+                    </View>
             </ImageBackground>
         </View>
         </>
@@ -131,7 +130,9 @@ const styles = StyleSheet.create({
     login: {
         alignSelf: 'center',
         fontSize: 20,
-        paddingTop: 50
+        paddingTop: 20,
+        paddingBottom: 50,
+        height: 200
     },
     switchContainer: {
         flexDirection: 'row',
@@ -149,7 +150,6 @@ const styles = StyleSheet.create({
     },
     signInContainer: {
         flex: 1,
-        resizeMode: 'cover',
         marginBottom: 0,
     },
     userName: {
@@ -163,6 +163,15 @@ const styles = StyleSheet.create({
         fontSize: 20,
         borderWidth: 2,
         backgroundColor: 'white',
+        shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 10,
+},
+shadowOpacity: 0.51,
+shadowRadius: 13.16,
+
+elevation: 20,
     },
     roomNumber: {
         height: 40,
@@ -172,10 +181,19 @@ const styles = StyleSheet.create({
         marginLeft: 10,
         marginRight: 10,
         paddingLeft: 20,
+        paddingRight: 10,
         fontSize: 20,
         borderWidth: 2,
-        backgroundColor: 'white'
-        
+        backgroundColor: 'white',
+        shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 10,
+},
+shadowOpacity: 0.51,
+shadowRadius: 13.16,
+
+elevation: 20,
         
     },
     password: {
@@ -188,7 +206,16 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         fontSize: 20,
         borderWidth: 2,
-        backgroundColor: 'white'   
+        backgroundColor: 'white', 
+        shadowColor: "#000",
+shadowOffset: {
+	width: 0,
+	height: 10,
+},
+shadowOpacity: 0.51,
+shadowRadius: 13.16,
+
+elevation: 20,
     },
     image: {
         width: '100%',
@@ -198,6 +225,5 @@ const styles = StyleSheet.create({
         fontSize: 25,
         justifyContent: 'center',
         marginTop: 25,
-    }
-    
+    },
 })
