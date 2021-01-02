@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
-        width: '100%'
+        width: '100%',
+        borderTopWidth: 1,
     },
     reqButton: {
         textAlign: 'right',

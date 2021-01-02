@@ -71,14 +71,15 @@ const styles = StyleSheet.create({
             height: 10,
         },
         shadowOpacity: 0.51,
-        shadowRadius: 13.16,
+        shadowRadius: 15,
         elevation: 20,
         
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: 'whitesmoke'
-        
+        backgroundColor: 'whitesmoke',
+        borderTopWidth: 1,
+       
     },
     requestItemsText: {
         fontSize: 30,

@@ -14,7 +14,7 @@ import { useDispatch } from 'react-redux'
 import { Switch } from 'react-native-switch'
 
 
-const image = { uri: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNO_zyA60RnWxDU0byK9DMM5Wsntb3O2QJ9w&usqp=CAU"}
+const image = { uri: "https://www.hilton.com/im/en/CHIWAWA/11118487/one-bedroom-suite-bedroom-waldorf-astoria-chicago-cory-phillips.jpg?impolicy=crop&cw=4028&ch=2983&gravity=NorthWest&xposition=236&yposition=9&rw=424&rh=314"}
 
 export default function SignInScreen({navigation}) {
 
@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         borderWidth: 2,
         backgroundColor: 'white',
+        borderRadius: 10,
         shadowColor: "#000",
 shadowOffset: {
 	width: 0,
@@ -184,6 +185,7 @@ elevation: 20,
         paddingRight: 10,
         fontSize: 20,
         borderWidth: 2,
+        borderRadius: 10,
         backgroundColor: 'white',
         shadowColor: "#000",
 shadowOffset: {
@@ -206,6 +208,7 @@ elevation: 20,
         paddingLeft: 20,
         fontSize: 20,
         borderWidth: 2,
+        borderRadius: 10,
         backgroundColor: 'white', 
         shadowColor: "#000",
 shadowOffset: {

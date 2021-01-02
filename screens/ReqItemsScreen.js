@@ -41,6 +41,7 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: 'whitesmoke',
         flex: 1,
+        borderTopWidth: 1,
     },
     logout: {
         backgroundColor: 'blue',
