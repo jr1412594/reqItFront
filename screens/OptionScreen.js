@@ -85,12 +85,14 @@ const styles = StyleSheet.create({
         fontSize: 30,
         color: '#131516',
         alignSelf: 'center',
-        paddingTop: 30
+        paddingTop: 30,
+        fontFamily: 'ContrailOne'
     },
     reportText: {
         fontSize: 30,
         color: '#131516',
         alignSelf: 'center',
-        paddingTop: 30
+        paddingTop: 30,
+        fontFamily: 'ContrailOne'
     }
 })

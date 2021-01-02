@@ -10,6 +10,7 @@ import
         ImageBackground,
     } 
     from 'react-native'
+
 import { useDispatch } from 'react-redux'
 import { Switch } from 'react-native-switch'
 
@@ -17,12 +18,14 @@ import { Switch } from 'react-native-switch'
 const image = { uri: "https://www.hilton.com/im/en/CHIWAWA/11118487/one-bedroom-suite-bedroom-waldorf-astoria-chicago-cory-phillips.jpg?impolicy=crop&cw=4028&ch=2983&gravity=NorthWest&xposition=236&yposition=9&rw=424&rh=314"}
 
 export default function SignInScreen({navigation}) {
-
+    
+    
     const dispatch = useDispatch()  
     const [username, setUsername] = useState('');
     const [roomNumber, setRoomNumber] = useState('');
     const [isEnabled, setIsEnabled] = useState(false);
     const [password, setPassword] = useState('')
+
     const handleUsername = (text) => {
         setUsername(text)
     }
@@ -70,7 +73,7 @@ export default function SignInScreen({navigation}) {
         <View style={styles.signInContainer}>
             <ImageBackground source={image} style={styles.image}>
                 <Text style={styles.login}>
-                    ReqIt App
+                    Req_it 
                 </Text>
                     <TextInput 
                         onChangeText={handleUsername}
@@ -129,10 +132,12 @@ const styles = StyleSheet.create({
 
     login: {
         alignSelf: 'center',
-        fontSize: 20,
+        fontSize: 30,
         paddingTop: 20,
         paddingBottom: 50,
-        height: 200
+        height: 200,
+        fontFamily: 'ContrailOne'
+
     },
     switchContainer: {
         flexDirection: 'row',
@@ -144,9 +149,10 @@ const styles = StyleSheet.create({
     },
     switchText: {
         color: 'red',
-        marginRight: 5,
+        marginRight: 10,
         marginTop: 3,
         fontSize: 18,
+        fontFamily: 'ContrailOne'
     },
     signInContainer: {
         flex: 1,

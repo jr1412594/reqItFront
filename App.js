@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { LogBox } from 'react-native'
+import * as Font from 'expo-font'
+import  AppLoading from 'expo-app-loading'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
@@ -10,6 +12,13 @@ import SignInScreen from './screens/SignInScreen';
 import ReqItemsScreen from './screens/ReqItemsScreen';
 import RequestedItemsScreen from './screens/RequestedItemsScreen';
 import OptionScreen from './screens/OptionScreen';
+// import { FontDisplay } from 'expo-font';
+
+const fetchFont = () => {
+  return Font.loadAsync({
+    'ContrailOne': require('./assets/fonts/ContrailOne-Regular.ttf')
+  });
+};
 
 const Stack = createStackNavigator();
 const MyTheme = {
@@ -27,6 +36,21 @@ const MyTheme = {
 
 export default function App() {
   // LogBox.ignoreAllLogs();
+  const [fontLoaded, setfontLoaded] = useState(false);
+
+
+  if(!fontLoaded) {
+    return ( 
+      <AppLoading 
+        startAsync={fetchFont}
+        onError={() => console.log("ERROR")}
+        onFinish={() => {
+          setfontLoaded(true)
+        }}
+      />
+    );
+  }
+        
 
   const store = createStore(reducers)
   
@@ -35,6 +59,7 @@ export default function App() {
       <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
             <Stack.Screen 
+            
               name="SignIn" 
               component={SignInScreen} 
               options={{ title: 'Req It'}}
