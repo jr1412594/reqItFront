@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Button, Text, StyleSheet} from 'react-native'
+import { View, TouchableOpacity, Text, StyleSheet} from 'react-native'
 
 export default function OptionScreen({navigation}) {
     
@@ -17,23 +17,23 @@ export default function OptionScreen({navigation}) {
     return (
         <View style={styles.optionsContainer}>
             <View style={styles.requestScreen}>
-                <Text onPress={handleRequest} style={styles.requestItemsText}>
-                    Request Items
-                </Text>
-                {/* <Button 
-                    title='Request Items'
-                    onPress={handleRequest}
-                /> */}
+                <TouchableOpacity onPress={handleRequest} >
+                    <Text  style={styles.requestItemsText}>
+                        Request Items
+                    </Text>
+                </TouchableOpacity>
             </View>
             <View style={styles.reportScreen}>
-                <Text onPress={handleReport} style={styles.reportText}>
-                    Report Issue
-                </Text>
-                {/* <Button 
-                    style={styles.reportButton}
-                    title="Report Issue"
-                    onPress={handleReport}
-                /> */}
+                <TouchableOpacity onPress={handleReport}>
+                    <Text style={styles.reportText}>
+                        Report Issue
+                    </Text>
+                    {/* <Button 
+                        style={styles.reportButton}
+                        title="Report Issue"
+                        onPress={handleReport}
+                    /> */}
+                </TouchableOpacity>
             </View>
         </View>
     )
