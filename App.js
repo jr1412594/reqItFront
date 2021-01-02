@@ -26,11 +26,11 @@ const MyTheme = {
   colors: {
     primary: '#595959',
     background: '#7f7f7f',
-    card: '#e0e0e0',
-    text: '#595959',
-    fontSize: 20,
-    border: 'rgb(199, 199, 204)',
-    notification: 'rgb(255, 69, 58)',
+    card: '#d9dadc',
+    text: '#344055',
+    fontSize: 50,
+    border: '#766e87',
+    notification: 'red',
   }
 }
 

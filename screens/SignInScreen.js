@@ -72,7 +72,7 @@ export default function SignInScreen({navigation}) {
         <>
         <View style={styles.signInContainer}>
             <ImageBackground source={image} style={styles.image}>
-                <Text style={styles.login}>
+                <Text style={styles.topText}>
                     Req_it 
                 </Text>
                     <TextInput 
@@ -130,14 +130,14 @@ export default function SignInScreen({navigation}) {
 
 const styles = StyleSheet.create({
 
-    login: {
+    topText: {
         alignSelf: 'center',
-        fontSize: 30,
+        fontSize: 40,
         paddingTop: 20,
         paddingBottom: 50,
         height: 200,
-        fontFamily: 'ContrailOne'
-
+        fontFamily: 'ContrailOne',
+        color: '#344055'
     },
     switchContainer: {
         flexDirection: 'row',
@@ -159,61 +159,64 @@ const styles = StyleSheet.create({
         marginBottom: 0,
     },
     userName: {
+        color: '#344055',
+        fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
+        borderColor: '#766e87',
+        borderWidth: 3,
         marginTop: 200,
         marginLeft: 10,
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
-        borderWidth: 2,
         backgroundColor: 'white',
         borderRadius: 10,
-        shadowColor: "#000",
+        shadowColor: "#131316",
 shadowOffset: {
-	width: 0,
+	width: 2,
 	height: 10,
 },
-shadowOpacity: 0.51,
+shadowOpacity: 0.75,
 shadowRadius: 13.16,
 
 elevation: 20,
     },
     roomNumber: {
+        color: '#344055',
+        fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
+        borderColor: '#766e87',
+        borderWidth: 3,
         marginTop: 20,
         marginLeft: 10,
         marginRight: 10,
         paddingLeft: 20,
         paddingRight: 10,
         fontSize: 20,
-        borderWidth: 2,
         borderRadius: 10,
         backgroundColor: 'white',
-        shadowColor: "#000",
+        shadowColor: "#131316",
 shadowOffset: {
-	width: 0,
+	width: 2,
 	height: 10,
 },
-shadowOpacity: 0.51,
+shadowOpacity: 0.75,
 shadowRadius: 13.16,
 
 elevation: 20,
         
     },
     password: {
+        color: '#344055',
+        fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
+        borderColor: '#766e87',
+        borderWidth: 3,
         marginTop: 20,
         marginLeft: 10,
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
-        borderWidth: 2,
         borderRadius: 10,
         backgroundColor: 'white', 
         shadowColor: "#000",
