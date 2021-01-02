@@ -3,7 +3,7 @@ import { LogBox } from 'react-native'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 import reducers from './reducers'
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, DefaultTheme } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './screens/HomeScreen'
 import SignInScreen from './screens/SignInScreen';
@@ -12,6 +12,18 @@ import RequestedItemsScreen from './screens/RequestedItemsScreen';
 import OptionScreen from './screens/OptionScreen';
 
 const Stack = createStackNavigator();
+const MyTheme = {
+  dark: false,
+  colors: {
+    primary: '#595959',
+    background: '#7f7f7f',
+    card: '#e0e0e0',
+    text: '#595959',
+    fontSize: 20,
+    border: 'rgb(199, 199, 204)',
+    notification: 'rgb(255, 69, 58)',
+  }
+}
 
 export default function App() {
   // LogBox.ignoreAllLogs();
@@ -20,7 +32,7 @@ export default function App() {
   
   return (
     <Provider store={store}>
-      <NavigationContainer>
+      <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
             <Stack.Screen 
               name="SignIn" 

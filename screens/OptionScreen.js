@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: '#e0e0e0'
+        backgroundColor: 'whitesmoke'
         
     },
     requestItemsText: {
