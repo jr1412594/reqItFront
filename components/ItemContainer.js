@@ -27,7 +27,9 @@ export default function ItemContainer() {
 
     return (
         <ScrollView style={styles.container}>
-            {showItems()}
+            <View style={styles.itemsDiv}>
+                {showItems()}   
+            </View>
         </ScrollView>
     )
 }
@@ -38,5 +40,5 @@ const styles = StyleSheet.create({
         flex: 1,
         margin: 1,
         backgroundColor: 'whitesmoke',
-    }
+    },
 })

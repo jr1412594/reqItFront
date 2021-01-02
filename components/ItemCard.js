@@ -60,6 +60,7 @@ const styles = StyleSheet.create({
         marginRight: 20,
         borderRadius: 15,
         borderWidth: 0.5,
+
     },
     needs: {
         marginTop: 10,
