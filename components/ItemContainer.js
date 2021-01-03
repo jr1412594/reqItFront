@@ -17,6 +17,7 @@ export default function ItemContainer() {
         fetch(baseUrl)
         .then(response => response.json())
         .then((items) => dispatch({type: 'LIST_ITEMS', items: items}))
+        .catch(error => console.log(error))
     } , [])
 
     const showItems = () => items.map(item => {

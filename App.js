@@ -35,7 +35,7 @@ const MyTheme = {
 }
 
 export default function App() {
-  // LogBox.ignoreAllLogs();
+  LogBox.ignoreAllLogs();
   const [fontLoaded, setfontLoaded] = useState(false);
 
 
