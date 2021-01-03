@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Text, View, StyleSheet, ScrollView,  } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import ItemCard from './ItemCard'
+import { HOST_WITH_PORT } from '../environment'
 
 const baseUrl = 'http://localhost:7000/items/'
 
@@ -14,7 +15,7 @@ export default function ItemContainer() {
 
 
     useEffect(() => {
-        fetch(baseUrl)
+        fetch(`${HOST_WITH_PORT}/items`)
         .then(response => response.json())
         .then((items) => dispatch({type: 'LIST_ITEMS', items: items}))
         .catch(error => console.log(error))

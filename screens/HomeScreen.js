@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
 import ItemContainer from '../components/ItemContainer'
 import { useSelector, useDispatch } from 'react-redux'
+import { HOST_WITH_PORT } from '../environment';
 
 const userBaseUrl = 'http://localhost:7000/users/'
 
@@ -21,7 +22,7 @@ export default function HomeScreen({navigation}) {
     }
 
     useEffect (() => {
-        fetch(userBaseUrl, {
+        fetch(`${HOST_WITH_PORT}/users`, {
             method: 'POST',
             headers: {
                 "Content-Type": 'application/json',

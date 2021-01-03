@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { View, Text, Image, StyleSheet, Button, TouchableOpacity} from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
-
+import { HOST_WITH_PORT } from '../environment'
 const requestUrl = 'http://localhost:7000/requests'
 
 
@@ -22,7 +22,7 @@ export default function ItemCard({item}) {
                 user_id: createdUser.id,
                 item_id: item.id
             }
-            fetch(requestUrl, {
+            fetch(`${HOST_WITH_PORT}/requests`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

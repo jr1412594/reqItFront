@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native'
 import { useDispatch } from 'react-redux'
+import { HOST_WITH_PORT } from  '../environment'
 const reqUrl = 'http://localhost:7000/requests'
 
 
@@ -9,14 +10,14 @@ const dispatch = useDispatch()
 
 
 const updateRequests = () => {
-    fetch(reqUrl)
+    fetch(`${HOST_WITH_PORT}/requests`)
         .then(response => response.json())
         .then((requests) => dispatch({ type: 'ALL_REQUESTS', requests: requests}))
     console.log(request.id,'clicked')
 }
 
 const handleComplete = () => {
-    fetch(`${reqUrl}/${request.id}`,{
+    fetch(`${HOST_WITH_PORT}/requests/${request.id}`,{
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json',

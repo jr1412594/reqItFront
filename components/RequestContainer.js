@@ -3,6 +3,7 @@ import { View, Text, ScrollView, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import RequestCard from './RequestCard'
 import { uniq } from 'lodash'
+import{ HOST_WITH_PORT } from '../environment'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
 const requestUrl = 'http://localhost:7000/requests'
@@ -13,7 +14,7 @@ export default function RequestContainer() {
     const requests = useSelector(state => state.requests)
 
     useEffect(() => {
-        fetch(requestUrl)
+        fetch(`${HOST_WITH_PORT}/requests`)
         .then(response => response.json())
         .then((requests) => dispatch({ type: 'ALL_REQUESTS', requests: requests}))
     }, [])

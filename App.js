@@ -12,6 +12,7 @@ import SignInScreen from './screens/SignInScreen';
 import ReqItemsScreen from './screens/ReqItemsScreen';
 import RequestedItemsScreen from './screens/RequestedItemsScreen';
 import OptionScreen from './screens/OptionScreen';
+import CameraScreen from './screens/CameraScreen';
 // import { FontDisplay } from 'expo-font';
 
 const fetchFont = () => {
@@ -71,6 +72,8 @@ export default function App() {
             <Stack.Screen name="All Requests" component={RequestedItemsScreen}
             />
             <Stack.Screen name="Option Screen" component={OptionScreen}
+            />
+            <Stack.Screen name="Camera Screen" component={CameraScreen}
             />
         </Stack.Navigator>
       </NavigationContainer>

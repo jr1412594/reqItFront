@@ -9,7 +9,7 @@ export default function OptionScreen({navigation}) {
     }
 
     const handleReport = () => {
-    
+        navigation.navigate('Camera Screen')
     }
 
 
