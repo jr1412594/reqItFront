@@ -13,6 +13,7 @@ import ReqItemsScreen from './screens/ReqItemsScreen';
 import RequestedItemsScreen from './screens/RequestedItemsScreen';
 import OptionScreen from './screens/OptionScreen';
 import CameraScreen from './screens/CameraScreen';
+import AdminScreen from './screens/AdminScreen';
 // import { FontDisplay } from 'expo-font';
 
 const fetchFont = () => {
@@ -22,6 +23,7 @@ const fetchFont = () => {
 };
 
 const Stack = createStackNavigator();
+
 const MyTheme = {
   dark: false,
   colors: {
@@ -36,9 +38,10 @@ const MyTheme = {
 }
 
 export default function App() {
-  LogBox.ignoreAllLogs();
-  const [fontLoaded, setfontLoaded] = useState(false);
 
+  LogBox.ignoreAllLogs();
+
+  const [fontLoaded, setfontLoaded] = useState(false);
 
   if(!fontLoaded) {
     return ( 
@@ -52,7 +55,6 @@ export default function App() {
     );
   }
         
-
   const store = createStore(reducers)
   
   return (
@@ -60,20 +62,73 @@ export default function App() {
       <NavigationContainer theme={MyTheme}>
         <Stack.Navigator>
             <Stack.Screen 
-            
               name="SignIn" 
               component={SignInScreen} 
-              options={{ title: 'Req It'}}
+              options={{ 
+                title: 'Welcome',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  fontWeight: 'bold'
+                }
+              }}
               />
-            <Stack.Screen name="Req Items" component={HomeScreen}
+            <Stack.Screen 
+              name="Req Items" 
+              component={HomeScreen} 
+              options={{
+                title: 'Item List',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  fontWeight: 'bold'
+                }
+              }}
             />
-            <Stack.Screen name="Req List" component={ReqItemsScreen}
+            <Stack.Screen name="Req List" component={ReqItemsScreen} options={{
+                title: 'Your Requests',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  fontWeight: 'bold'
+                }
+              }}
             />
-            <Stack.Screen name="All Requests" component={RequestedItemsScreen}
+            <Stack.Screen name="All Requests" component={RequestedItemsScreen} options={{
+                title: 'All Requests',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  fontWeight: 'bold'
+                }
+              }}
             />
-            <Stack.Screen name="Option Screen" component={OptionScreen}
+            <Stack.Screen name="Option Screen" component={OptionScreen} options={{
+                title: 'Options',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  ffontWeight: 'bold'
+                }
+              }}
             />
-            <Stack.Screen name="Camera Screen" component={CameraScreen}
+            <Stack.Screen name="Camera Screen" component={CameraScreen} options={{
+                title: 'Snap Shot',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  ffontWeight: 'bold'
+                }
+              }}
+            />
+            <Stack.Screen name="Admin Screen" component={AdminScreen} options={{
+                title: 'Administrator',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  ffontWeight: 'bold'
+                }
+              }}
             />
         </Stack.Navigator>
       </NavigationContainer>

@@ -59,10 +59,11 @@ export default function SignInScreen({navigation}) {
         setUser()
         resetFields()
         password === 'password' ?
-        navigation.navigate('All Requests') 
+        navigation.navigate('Admin Screen') 
         :
-        // navigation.navigate('Option Screen')
-        Alert.alert('Invalid Credentials')
+        navigation.navigate('Option Screen')
+        // Alert.alert('Invalid Credentials')
+        
     }
 
     const toggleSwitch = () => {
