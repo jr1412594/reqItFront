@@ -8,6 +8,7 @@ import
         StyleSheet, 
         TextInput,
         ImageBackground,
+        Alert,
     } 
     from 'react-native'
 
@@ -60,7 +61,8 @@ export default function SignInScreen({navigation}) {
         password === 'password' ?
         navigation.navigate('All Requests') 
         :
-        navigation.navigate('Option Screen')
+        // navigation.navigate('Option Screen')
+        Alert.alert('Invalid Credentials')
     }
 
     const toggleSwitch = () => {
