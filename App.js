@@ -14,6 +14,7 @@ import RequestedItemsScreen from './screens/RequestedItemsScreen';
 import OptionScreen from './screens/OptionScreen';
 import CameraScreen from './screens/CameraScreen';
 import AdminScreen from './screens/AdminScreen';
+import IssuesScreen from './screens/IssuesScreen'
 // import { FontDisplay } from 'expo-font';
 
 const fetchFont = () => {
@@ -87,6 +88,15 @@ export default function App() {
             />
             <Stack.Screen name="Req List" component={ReqItemsScreen} options={{
                 title: 'Your Requests',
+                headerBackTitleVisible: false,
+                headerTitleStyle: {
+                  fontFamily: 'ContrailOne',
+                  fontWeight: 'bold'
+                }
+              }}
+            />
+            <Stack.Screen name="Issues Screen" component={IssuesScreen} options={{
+                title: 'Open Issues',
                 headerBackTitleVisible: false,
                 headerTitleStyle: {
                   fontFamily: 'ContrailOne',

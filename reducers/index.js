@@ -45,6 +45,15 @@ const requests = (state=[], action) => {
     }
 }
 
+const issues = (state=[], action) => {
+    switch(action.type) {
+        case 'ISSUE_IMAGES':
+            return action.issues
+        default:
+            return state
+    }
+}
+
 export default combineReducers({
-    items, reqItems, username, createdUser, requests
+    items, reqItems, username, createdUser, requests, issues
 })

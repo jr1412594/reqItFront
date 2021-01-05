@@ -1,16 +1,29 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, ImageBackground } from 'react-native';
-import { Camera } from 'expo-camera';
-import { Feather as Icon } from "@expo/vector-icons"
+
 import { storage } from '../src/firebase/firebase'
 import SecCameraComponent from '../components/SecCameraComponent'
 
 export default function CameraComponent() {
 
     return (
-        // <Text>Here</Text>
         <SecCameraComponent />
     )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // const [hasPermission, setHasPermission] = useState(null);
     // const [type, setType] = useState(Camera.Constants.Type.back);
     // const [previewVisible, setPreviewVisable] = useState(false)

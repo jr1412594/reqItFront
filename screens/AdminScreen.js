@@ -8,7 +8,7 @@ export default function AdminScreen({navigation}) {
     }
 
     const handleReported = () => {
-        console.log('comming soon')
+        navigation.navigate('Issues Screen')
     }
 
 
