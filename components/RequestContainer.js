@@ -42,7 +42,9 @@ export default function RequestContainer() {
 
     return (
         <ScrollView>
-            {showRequests()}
+            <View>
+                {showRequests()}
+            </View>
         </ScrollView>
     )
 }

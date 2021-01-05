@@ -77,7 +77,7 @@ const styles = StyleSheet.create({
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#898c9d',
         borderTopWidth: 1,
        
     },

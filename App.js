@@ -108,7 +108,7 @@ export default function App() {
                 headerBackTitleVisible: false,
                 headerTitleStyle: {
                   fontFamily: 'ContrailOne',
-                  ffontWeight: 'bold'
+                  fontWeight: 'bold'
                 }
               }}
             />
@@ -117,7 +117,7 @@ export default function App() {
                 headerBackTitleVisible: false,
                 headerTitleStyle: {
                   fontFamily: 'ContrailOne',
-                  ffontWeight: 'bold'
+                  fontWeight: 'bold'
                 }
               }}
             />
@@ -126,7 +126,7 @@ export default function App() {
                 headerBackTitleVisible: false,
                 headerTitleStyle: {
                   fontFamily: 'ContrailOne',
-                  ffontWeight: 'bold'
+                  fontWeight: 'bold'
                 }
               }}
             />

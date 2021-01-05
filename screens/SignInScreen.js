@@ -58,12 +58,13 @@ export default function SignInScreen({navigation}) {
     const handleNavigation = () => {
         setUser()
         resetFields()
-        password === 'password' ?
-        navigation.navigate('Admin Screen') 
-        :
-        navigation.navigate('Option Screen')
-        // Alert.alert('Invalid Credentials')
-        
+        if(password === 'password'){
+            navigation.navigate('Admin Screen')
+        } else if (password === ''){
+            navigation.navigate('Option Screen')
+        } else {
+            Alert.alert('Invalid Credentials')
+        }
     }
 
     const toggleSwitch = () => {
@@ -175,14 +176,13 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
         borderRadius: 10,
         shadowColor: "#131316",
-shadowOffset: {
-	width: 2,
-	height: 10,
-},
-shadowOpacity: 0.75,
-shadowRadius: 13.16,
-
-elevation: 20,
+        shadowOffset: {
+            width: 2,
+            height: 10,
+        },
+        shadowOpacity: 0.75,
+        shadowRadius: 13.16,
+        elevation: 20,
     },
     roomNumber: {
         color: '#344055',
@@ -199,15 +199,13 @@ elevation: 20,
         borderRadius: 10,
         backgroundColor: 'white',
         shadowColor: "#131316",
-shadowOffset: {
-	width: 2,
-	height: 10,
-},
-shadowOpacity: 0.75,
-shadowRadius: 13.16,
-
-elevation: 20,
-        
+        shadowOffset: {
+            width: 2,
+            height: 10,
+        },
+        shadowOpacity: 0.75,
+        shadowRadius: 13.16,
+        elevation: 20,
     },
     password: {
         color: '#344055',
@@ -223,14 +221,13 @@ elevation: 20,
         borderRadius: 10,
         backgroundColor: 'white', 
         shadowColor: "#131316",
-shadowOffset: {
-	width: 0,
-	height: 10,
-},
-shadowOpacity: 0.75,
-shadowRadius: 13.16,
-
-elevation: 20,
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.75,
+        shadowRadius: 13.16,
+        elevation: 20,
     },
     image: {
         width: '100%',
