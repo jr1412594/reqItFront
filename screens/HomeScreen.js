@@ -73,8 +73,9 @@ const styles = StyleSheet.create({
         fontFamily: 'ContrailOne'
     },
     buttonContainer: {
-        backgroundColor: '#ffffff',
+        backgroundColor: '#2a6689',
         borderWidth: 1,
         height: 50,
+
     }
 });

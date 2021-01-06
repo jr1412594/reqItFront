@@ -24,15 +24,14 @@ export default function ReqItemsScreen({navigation}) {
 
     return (
         <View style={styles.container}>
+                <View style={styles.logout}>
+                    <Text style={styles.logoutText} onPress={handleLogout}>
+                        Log out
+                    </Text>
+                </View>
             <ScrollView>
                 {requestedItems()}
             </ScrollView>
-                <View style={styles.logout}>
-                    <Button 
-                        onPress={handleLogout}
-                        title='Log out'
-                    />
-                </View>
         </View>
     )
 }
@@ -44,11 +43,18 @@ const styles = StyleSheet.create({
         // borderTopWidth: 1,
     },
     logout: {
-        backgroundColor: 'blue',
-        height: 40,
+        backgroundColor: '#2a6689',
+        height: 50,
         marginBottom: 30,
-        width: 90,
-        alignSelf: 'flex-end',
-        borderRadius: 10,
+        width: '100%',
+        alignSelf: 'center',
+        // borderRadius: 10,
+    },
+    logoutText: {
+        textAlign: 'center',
+        color: '#272643',
+        paddingTop: 13,
+        fontSize: 20,
+        fontFamily: 'ContrailOne',
     }
 })
