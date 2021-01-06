@@ -51,10 +51,10 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.51,
-        shadowRadius: 13.16,
+        shadowOpacity: 0.25,
+        shadowRadius: 10,
 
-        elevation: 20,
+        elevation: 10,
     },
     reportScreen: {
         backgroundColor: '#faf6f6',
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.51,
-        shadowRadius: 15,
-        elevation: 20,
+        shadowOpacity: 0.25,
+        shadowRadius: 10,
+        elevation: 10,
         
     },
     optionsContainer: {

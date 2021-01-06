@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
 
     },
     switchText: {
-        color: 'red',
+        color: '#344055',
         marginRight: 10,
         marginTop: 3,
         fontSize: 18,
