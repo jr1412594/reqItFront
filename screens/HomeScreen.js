@@ -3,6 +3,7 @@ import { View, Text, StyleSheet, Button } from 'react-native'
 import ItemContainer from '../components/ItemContainer'
 import { useSelector, useDispatch } from 'react-redux'
 import { HOST_WITH_PORT } from '../environment';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 const userBaseUrl = 'http://localhost:7000/users/'
 
@@ -36,12 +37,16 @@ export default function HomeScreen({navigation}) {
 
     return (
         <View style={styles.container}>
-            
-            <Button 
-                title="Your Requests" 
-                style={styles.reqButton} 
-                onPress={navigateRequest}
-                />
+                <TouchableOpacity onPress={navigateRequest}>
+            <View style={styles.buttonContainer}>
+                
+                <Text
+                    style={styles.reqButton} 
+                    >
+                        Your Requests 
+                </Text>
+            </View>
+                        </TouchableOpacity>
             <ItemContainer />
         </View>
     )
@@ -51,16 +56,25 @@ const styles = StyleSheet.create({
     home: {
         flex: 1, 
         alignItems: 'center', 
-        justifyContent: 'center'
+        justifyContent: 'center',
+ 
     },
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        width: '100%',
-        borderTopWidth: 1,
+        backgroundColor: '#272643',
+        // width: '100%',
+        
     },
     reqButton: {
-        textAlign: 'right',
-        color: 'red',
+        textAlign: 'center',
+        color: '#272643',
+        paddingTop: 13,
+        fontSize: 20,
+        fontFamily: 'ContrailOne'
+    },
+    buttonContainer: {
+        backgroundColor: '#ffffff',
+        borderWidth: 1,
+        height: 50,
     }
 });

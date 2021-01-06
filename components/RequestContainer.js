@@ -51,10 +51,11 @@ export default function RequestContainer() {
 
 const styles = StyleSheet.create({
     allReqItems: {
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#bae8e8',
     },
     room: {
         fontSize: 20,
+        fontFamily: 'ContrailOne',
         height: 50,
         alignSelf: 'center',
     },

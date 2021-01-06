@@ -1,6 +1,8 @@
 import React from 'react'
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native'
 
+
+
 export default function AdminScreen({navigation}) {
 
     const handleRequested = () => {
@@ -40,7 +42,7 @@ export default function AdminScreen({navigation}) {
 
 const styles = StyleSheet.create({
     requestScreen: {
-        backgroundColor: '#faf6f6',
+        backgroundColor: '#e3f6f5',
         marginTop: 200,
         width: 270,
         height: 100,
@@ -57,7 +59,7 @@ const styles = StyleSheet.create({
         elevation: 10,
     },
     reportScreen: {
-        backgroundColor: '#faf6f6',
+        backgroundColor: '#e3f6f5',
         marginTop: 100,
         height: 100,
         width: 270,
@@ -75,7 +77,7 @@ const styles = StyleSheet.create({
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#bae8e8',
         borderTopWidth: 1,
     },
     requestItemsText: {

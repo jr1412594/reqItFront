@@ -1,5 +1,5 @@
 import React, { useState} from 'react'
-import { Image, StyleSheet, Button, Text, View, Alert } from 'react-native';
+import { Image, StyleSheet, Button, Text, View, Dimensions} from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import * as firebase from 'firebase';
 import { HOST_WITH_PORT } from '../environment'
@@ -48,7 +48,11 @@ export default function SecCameraComponent (){
 
             return (
                 <View style ={styles.container}>
-                    <Button title='choose image...' onPress={onChooseImagePress}/>
+                    <View style={styles.textContainer}>
+                        <Text onPress={onChooseImagePress} style={styles.text}>
+                        Press to take Picture
+                        </Text>
+                    </View>
                 </View>
         )  
     }
@@ -58,6 +62,28 @@ const styles = StyleSheet.create({
     container: {
         height: '100%',
         paddingTop: 100,
-        backgroundColor: 'white'
-    }
+        backgroundColor: '#bae8e8'
+    },
+    textContainer: {
+        borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
+        width: Dimensions.get('window').width * 0.5,
+        height: Dimensions.get('window').width * 0.5,
+        backgroundColor:'#2a6689',
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginLeft: 90,
+        marginTop: 100,
+        shadowColor: "#131316",
+        shadowOffset: {
+            width: 2,
+            height: 7,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 10,
+        elevation: 5,
+    },
+    text: {
+        fontFamily: 'ContrailOne',
+        fontSize: 21,
+    } 
 })

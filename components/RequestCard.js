@@ -29,9 +29,9 @@ const handleComplete = () => {
 
 
     return (
-        <View>
+        <View style={styles.reqImageContainer}>
             <TouchableOpacity onPress={handleComplete}>
-                <Text>{request.item.name}</Text> 
+                <Text style={styles.itemNames}>{request.item.name}</Text> 
                 <Image 
                     style={styles.reqImage}
                     source={{uri: request.item.image}}
@@ -49,16 +49,14 @@ const styles = StyleSheet.create({
         marginLeft: 1,
         marginRight: 20,
         borderRadius: 15,
-        borderWidth: 0.5,
-        // shadowColor: "#000",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 10,
-        // },
-        // shadowOpacity: 0.51,
-        // shadowRadius: 13.16,
-        
-        // elevation: 20,
-        
+    },
+    itemNames: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginBottom: 2,
+        fontFamily: 'ContrailOne',
+    },
+    reqImageContainer: {
+        backgroundColor: '#bae8e8',
     }
 })

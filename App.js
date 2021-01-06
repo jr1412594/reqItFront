@@ -30,8 +30,8 @@ const MyTheme = {
   colors: {
     primary: '#595959',
     background: '#7f7f7f',
-    card: '#d9dadc',
-    text: '#344055',
+    card: '#e3f6f5',
+    text: '#2c698d',
     fontSize: 50,
     border: '#766e87',
     notification: 'red',

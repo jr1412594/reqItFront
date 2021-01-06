@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react'
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, StyleSheet } from 'react-native'
 import { useDispatch, useSelector } from 'react-redux'
 import OpenIssueCard from './OpenIssueCard' 
 import { HOST_WITH_PORT } from '../environment';
@@ -23,10 +23,16 @@ export default function OpenIssues() {
     })
     
     return (
-        <View>
+        <View style={styles.openIssuesContainer}>
             <ScrollView>
                 {showIssues()}
             </ScrollView>
         </View>
     )
 }
+
+const styles = StyleSheet.create({
+    openIssuesContainer: {
+        backgroundColor: '#bae8e8',
+    }
+})

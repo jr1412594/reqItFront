@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
         paddingBottom: 50,
         height: 200,
         fontFamily: 'ContrailOne',
-        color: '#344055'
+        color: '#2c698d'
     },
     switchContainer: {
         flexDirection: 'row',
@@ -152,7 +152,7 @@ const styles = StyleSheet.create({
 
     },
     switchText: {
-        color: '#344055',
+        color: '#2c698d',
         marginRight: 10,
         marginTop: 3,
         fontSize: 18,
@@ -163,10 +163,10 @@ const styles = StyleSheet.create({
         marginBottom: 0,
     },
     userName: {
-        color: '#344055',
+        color: '#2c698d',
         fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: '#766e87',
+        borderColor: '#2c698d',
         borderWidth: 3,
         marginTop: 40,
         marginLeft: 10,
@@ -185,10 +185,10 @@ const styles = StyleSheet.create({
         elevation: 20,
     },
     roomNumber: {
-        color: '#344055',
+        color: '#2c698d',
         fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: '#766e87',
+        borderColor: '#2c698d',
         borderWidth: 3,
         marginTop: 20,
         marginLeft: 10,
@@ -208,10 +208,10 @@ const styles = StyleSheet.create({
         elevation: 20,
     },
     password: {
-        color: '#344055',
+        color: '#2c698d',
         fontFamily: 'ContrailOne',
         height: 40,
-        borderColor: '#766e87',
+        borderColor: '#2c698d',
         borderWidth: 3,
         marginTop: 20,
         marginLeft: 10,

@@ -28,11 +28,6 @@ export default function OptionScreen({navigation}) {
                     <Text style={styles.reportText}>
                         Report Issue
                     </Text>
-                    {/* <Button 
-                        style={styles.reportButton}
-                        title="Report Issue"
-                        onPress={handleReport}
-                    /> */}
                 </TouchableOpacity>
             </View>
         </View>
@@ -42,13 +37,13 @@ export default function OptionScreen({navigation}) {
 
 const styles = StyleSheet.create({
     requestScreen: {
-        backgroundColor: '#faf6f6',
+        backgroundColor: '#e3f6f5',
         marginTop: 200,
         width: 270,
         height: 100,
         alignSelf: 'center',
         borderRadius: 10,
-        shadowColor: "#000",
+        shadowColor: "#2c698d",
         shadowOffset: {
             width: 0,
             height: 10,
@@ -59,13 +54,13 @@ const styles = StyleSheet.create({
         elevation: 10,
     },
     reportScreen: {
-        backgroundColor: '#faf6f6',
+        backgroundColor: '#e3f6f5',
         marginTop: 100,
         height: 100,
         width: 270,
         alignSelf: 'center',
         borderRadius: 10,
-        shadowColor: "#000",
+        shadowColor: "#2c698d",
         shadowOffset: {
             width: 0,
             height: 10,
@@ -77,20 +72,20 @@ const styles = StyleSheet.create({
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: '#898c9d',
+        backgroundColor: '#bae8e8',
         borderTopWidth: 1,
        
     },
     requestItemsText: {
         fontSize: 30,
-        color: '#131516',
+        color: '#272643',
         alignSelf: 'center',
         paddingTop: 30,
         fontFamily: 'ContrailOne'
     },
     reportText: {
         fontSize: 30,
-        color: '#131516',
+        color: '#272643',
         alignSelf: 'center',
         paddingTop: 30,
         fontFamily: 'ContrailOne'

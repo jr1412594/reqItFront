@@ -72,7 +72,8 @@ const styles = StyleSheet.create({
         fontFamily: 'ContrailOne'
     },
     itemDiv: {
-        borderBottomWidth: 1,
+        backgroundColor: '#bae8e8',
+        // borderBottomWidth: 1,
         borderBottomColor: 'gray',
     },
 })

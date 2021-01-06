@@ -39,9 +39,9 @@ export default function ReqItemsScreen({navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: 'whitesmoke',
+        backgroundColor: '#bae8e8',
         flex: 1,
-        borderTopWidth: 1,
+        // borderTopWidth: 1,
     },
     logout: {
         backgroundColor: 'blue',
