@@ -8,7 +8,7 @@ import { HOST_WITH_PORT } from '../environment';
 export default function OpenIssues() {
     const dispatch = useDispatch()
     const issues = useSelector(state => state.issues)
-console.log(issues, 'what are you')
+
     useEffect(() => {
         fetch(`${HOST_WITH_PORT}/issues`)
         .then(response => response.json())
