@@ -41,17 +41,19 @@ export default function RequestContainer() {
     }
 
     return (
-        <ScrollView>
-            <View>
-                {showRequests()}
-            </View>
-        </ScrollView>
+        <View style={styles.container}>
+            <ScrollView>
+                <View>
+                    {showRequests()}
+                </View>
+            </ScrollView>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
     allReqItems: {
-        backgroundColor: '#bae8e8',
+        backgroundColor: '#f7fdfc',
     },
     room: {
         fontSize: 20,
@@ -60,6 +62,8 @@ const styles = StyleSheet.create({
         alignSelf: 'center',
     },
     roomDiv: {
-        borderTopWidth: 2
+    },
+    container: {
+        flex: 1,
     }
 })

@@ -7,7 +7,7 @@ export default function RequestedItemsScreen() {
 
     return (
     
-        <View>
+        <View style={{backgroundColor: '#f7fdfc', height: '100%'}}>
             <RequestContainer/>
         </View>
         

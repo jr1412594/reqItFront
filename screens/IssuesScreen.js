@@ -7,7 +7,7 @@ export default function IssuesScreen() {
     // const user = useSelector(state => state.username)
 
     return (
-        <View style={{backgroundColor: '#bae8e8', height: '100%', borderTopWidth: 1, paddingTop: 5}}>
+        <View style={{backgroundColor: '#f7fdfc', height: '100%', borderTopWidth: 1, paddingTop: 5}}>
             {/* <Text>{user.roomNumber}</Text> */}
             <OpenIssues />
         </View>

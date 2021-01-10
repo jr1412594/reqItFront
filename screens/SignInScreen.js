@@ -4,7 +4,6 @@ import
     { 
         View, 
         Text, 
-        Button, 
         StyleSheet, 
         TextInput,
         ImageBackground,
@@ -120,11 +119,12 @@ export default function SignInScreen({navigation}) {
                             switchRightPx={5}
                             />
                     </View>
-                    <View>
-                        <Button title="Sign In"
-                            onPress={handleNavigation}
-                            style={styles.signInButton}
-                            />
+                    <View style={styles.singInContainerContainer}>
+                        <View style={styles.signInCont}>
+                            <Text style={styles.signInText} onPress={handleNavigation}>
+                                Sign In
+                            </Text>
+                        </View>
                     </View>
             </ImageBackground>
         </View>
@@ -141,22 +141,29 @@ const styles = StyleSheet.create({
         paddingBottom: 50,
         height: 200,
         fontFamily: 'ContrailOne',
-        color: '#2c698d'
+        color: '#255774'
     },
     switchContainer: {
         flexDirection: 'row',
         alignItems: 'flex-start',
-        marginLeft: 215,
+        marginLeft: 250,
         marginTop: 10,
         height: 35,
 
     },
     switchText: {
-        color: '#2c698d',
+        color: '#255774',
         marginRight: 10,
         marginTop: 3,
-        fontSize: 18,
-        fontFamily: 'ContrailOne'
+        fontSize: 22,
+        fontWeight: 'bold',
+        fontFamily: 'ContrailOne',
+        textShadowColor: 'rgba(0, 50, 100, .55)',
+        textShadowOffset: {
+            width: -2, 
+            height: 2
+        },
+        textShadowRadius: 5
     },
     signInContainer: {
         flex: 1,
@@ -173,15 +180,15 @@ const styles = StyleSheet.create({
         marginRight: 10,
         paddingLeft: 20,
         fontSize: 20,
-        backgroundColor: '#e3f6f5',
+        backgroundColor: '#f7fdfc',
         borderRadius: 10,
         shadowColor: "#131316",
         shadowOffset: {
             width: 2,
             height: 10,
         },
-        shadowOpacity: 0.75,
-        shadowRadius: 13.16,
+        shadowOpacity: 0.15,
+        shadowRadius: 10,
         elevation: 20,
     },
     roomNumber: {
@@ -197,14 +204,14 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         fontSize: 20,
         borderRadius: 10,
-        backgroundColor: '#e3f6f5',
+        backgroundColor: '#f7fdfc',
         shadowColor: "#131316",
         shadowOffset: {
             width: 2,
             height: 10,
         },
-        shadowOpacity: 0.75,
-        shadowRadius: 13.16,
+        shadowOpacity: 0.15,
+        shadowRadius: 10,
         elevation: 20,
     },
     password: {
@@ -219,23 +226,40 @@ const styles = StyleSheet.create({
         paddingLeft: 20,
         fontSize: 20,
         borderRadius: 10,
-        backgroundColor: '#e3f6f5', 
+        backgroundColor: '#f7fdfc', 
         shadowColor: "#131316",
         shadowOffset: {
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.75,
-        shadowRadius: 13.16,
+        shadowOpacity: 0.15,
+        shadowRadius: 10,
         elevation: 20,
     },
     image: {
         width: '100%',
         height: '100%'
     },
-    signInButton: {
-        fontSize: 25,
-        justifyContent: 'center',
-        marginTop: 25,
+    // signInButton: {
+    signInText: {
+        fontSize: 22,
+        marginLeft: 15,
+        marginTop: 5,
+        fontWeight: 'bold',
+        width: 80,
+        fontFamily: 'ContrailOne',
+        color: '#2c698d',
     },
+    signInCont: {
+        backgroundColor: '#f7fdfc',
+        borderWidth: 0.2,
+        width: 90,
+        alignSelf: 'center',
+        borderRadius: 10,
+        // opacity: 0.8
+    },
+    singInContainerContainer: {
+        width: '100%'
+    }
+    
 })

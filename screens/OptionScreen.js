@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.10,
         shadowRadius: 10,
 
         elevation: 10,
@@ -65,15 +65,15 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.10,
         shadowRadius: 10,
         elevation: 10,
         
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: '#bae8e8',
-        borderTopWidth: 1,
+        backgroundColor: '#f7fdfc',
+        
        
     },
     requestItemsText: {

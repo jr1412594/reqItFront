@@ -28,11 +28,6 @@ export default function AdminScreen({navigation}) {
                     <Text style={styles.reportText}>
                         Reported Issues
                     </Text>
-                    {/* <Button 
-                        style={styles.reportButton}
-                        title="Report Issue"
-                        onPress={handleReport}
-                    /> */}
                 </TouchableOpacity>
             </View>
         </View>
@@ -53,7 +48,7 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.10,
         shadowRadius: 10,
 
         elevation: 10,
@@ -70,15 +65,14 @@ const styles = StyleSheet.create({
             width: 0,
             height: 10,
         },
-        shadowOpacity: 0.25,
+        shadowOpacity: 0.10,
         shadowRadius: 10,
         elevation: 10,
         
     },
     optionsContainer: {
         flex: 1,
-        backgroundColor: '#bae8e8',
-        borderTopWidth: 1,
+        backgroundColor: '#f7fdfc',
     },
     requestItemsText: {
         fontSize: 30,

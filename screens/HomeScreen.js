@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     },
     container: {
         flex: 1,
-        backgroundColor: '#272643',
+        backgroundColor: '#f7fdfc',
         // width: '100%',
         
     },
@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
         fontFamily: 'ContrailOne'
     },
     buttonContainer: {
-        backgroundColor: '#2a6689',
-        borderWidth: 1,
+        backgroundColor: '#ecf8f8',
+        // borderWidth: 1,
         height: 50,
 
     }

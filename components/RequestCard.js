@@ -46,9 +46,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 210,
         marginBottom: 10,
-        marginLeft: 1,
-        marginRight: 20,
         borderRadius: 15,
+
     },
     itemNames: {
         fontSize: 18,
@@ -57,6 +56,6 @@ const styles = StyleSheet.create({
         fontFamily: 'ContrailOne',
     },
     reqImageContainer: {
-        backgroundColor: '#bae8e8',
+        backgroundColor: '#f7fdfc',
     }
 })

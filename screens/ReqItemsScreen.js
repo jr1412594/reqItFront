@@ -38,16 +38,16 @@ export default function ReqItemsScreen({navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#bae8e8',
+        backgroundColor: '#f7fdfc',
         flex: 1,
-        // borderTopWidth: 1,
     },
     logout: {
-        backgroundColor: '#2a6689',
+        backgroundColor: '#ecf8f8',
         height: 50,
         marginBottom: 30,
         width: '100%',
         alignSelf: 'center',
+        // borderBottomWidth: 1,
         // borderRadius: 10,
     },
     logoutText: {

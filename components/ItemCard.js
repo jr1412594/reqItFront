@@ -56,10 +56,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: 210,
         marginBottom: 10,
-        marginLeft: 1,
-        marginRight: 20,
         borderRadius: 15,
-        borderWidth: 0.5,
+
 
     },
     needs: {
@@ -72,8 +70,7 @@ const styles = StyleSheet.create({
         fontFamily: 'ContrailOne'
     },
     itemDiv: {
-        backgroundColor: '#bae8e8',
-        // borderBottomWidth: 1,
+        backgroundColor: '#f7fdfc',
         borderBottomColor: 'gray',
     },
 })

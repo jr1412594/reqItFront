@@ -33,6 +33,8 @@ export default function OpenIssues() {
 
 const styles = StyleSheet.create({
     openIssuesContainer: {
-        backgroundColor: '#bae8e8',
+        flex: 1,
+        backgroundColor: '#f7fdfc',
+
     }
 })
